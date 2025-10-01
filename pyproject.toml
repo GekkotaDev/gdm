@@ -1,0 +1,36 @@
+[project]
+name = "gdm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anyio[trio]>=4.11.0",
+    "asyncer>=0.0.8",
+    "copier>=9.10.2",
+    "httpx>=0.28.1",
+    "pipe>=2.2",
+    "prompt-toolkit>=3.0.52",
+    "pydantic>=2.11.9",
+    "pyrsistent>=0.20.0",
+    "pyyaml>=6.0.3",
+    "returns>=0.26.0",
+    "rich>=14.1.0",
+    "textual>=6.2.0",
+    "toolz>=1.0.0",
+    "typer>=0.17.4",
+]
+
+[dependency-groups]
+dev = [
+    "crosshair-tool>=0.0.95",
+    "hypothesis>=6.139.1",
+    "hypothesis-crosshair>=0.0.25",
+    "pytest>=8.4.2",
+    "ruff>=0.13.0",
+    "textual>=6.2.0",
+    "tox>=4.30.2",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
